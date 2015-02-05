@@ -1,5 +1,5 @@
 ##Word Counter
-  Allows user to enter a many words, split by spaces, and a seperate single word to count how many times it was entered.
+  Allows user to enter a many words, split by spaces, and a seperate single word to count how many times it was entered. Punctuation attached to words not counted.
 
   Ruby version 2.2
 
