@@ -1,19 +1,14 @@
 require ('sinatra')
 require ('sinatra/reloader')
-require ('./lib/times_you_said_this')
+require ('./lib/word_count')
 
-get ('/') do
-  erb(:form)
+get('/') do
+  erb(:index)
 end
 
-get ('/result') do
+get('/results') do
   @word = params.fetch('word')
   @sentences = params.fetch('sentences')
-  #@outcome = @word.said()
-  #@outcome = @word.said('')
-
-  #@outcome = word.count(@word).said()
-
-  #@outcome = params.fetch('word').said()
-  erb(:result)
+  @outcome = params.fetch('sentences').frequency(params.fetch('word'))
+  erb(:results)
 end
