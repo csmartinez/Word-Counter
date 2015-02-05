@@ -9,6 +9,6 @@ end
 get('/results') do
   @word = params.fetch('word')
   @sentences = params.fetch('sentences')
-  @outcome = params.fetch('sentences').frequency(params.fetch('word'))
+  @outcome = @sentences.frequency(@word)
   erb(:results)
 end
